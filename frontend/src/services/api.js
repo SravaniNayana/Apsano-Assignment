@@ -3,7 +3,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:5000/api',
+    baseURL: 'https://apsano-keep-notes-enc2o0wnq-sravaninayanas-projects.vercel.app/api',
 });
 
 // Add a request interceptor
