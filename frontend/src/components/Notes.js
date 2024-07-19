@@ -73,7 +73,7 @@ const Notes = () => {
 
     const handleUnarchive = async (id) => {
         try {
-            const { data } = await api.put(`/notes/${id}/unarchive`);
+            await api.put(`/notes/${id}/unarchive`);
             setNotes(notes.filter(note => note._id !== id)); // Remove unarchived note from current view
         } catch (error) {
             console.error('Failed to unarchive note', error);
