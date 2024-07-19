@@ -3,8 +3,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://sravanis-mongodb.netlify.app/.netlify/functions',
-    // 'https://sravanis-mongodb.netlify.app/api',
+    baseURL: 'https://sravanis-mongodb.netlify.app/api',
 });
 
 // Add a request interceptor
