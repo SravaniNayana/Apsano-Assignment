@@ -3,7 +3,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://localhost:10000/api',
+    baseURL: 'https://sravanis-mongodb.netlify.app/api',
 });
 
 // Add a request interceptor
