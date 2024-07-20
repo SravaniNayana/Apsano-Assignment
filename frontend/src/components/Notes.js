@@ -114,8 +114,7 @@ const Notes = () => {
                     />
                 </div>
             )}
-            {view === 'trash' && ( <h2> 'Trashed Notes' </h2> )}
-            <h2>{view === 'archived' ? 'Archived Notes' : 'Your Notes'}</h2>
+            <h2>{view === 'trash' ? 'Trashed Notes' : {view === 'archived' ? 'Archived Notes' : 'Your Notes'}}</h2>
             <div className="notes-list">
                 {filteredNotes.map(note => (
                     <div key={note._id} className="note" style={{ backgroundColor: note.color }}>
