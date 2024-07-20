@@ -20,6 +20,9 @@ const Notes = () => {
                 if (view === 'archived') {
                     endpoint = '/notes/archived';
                 }
+                if (view === 'trash') {
+                    endpoint = '/notes/trash';
+                }
                 const { data } = await api.get(endpoint);
                 setNotes(data);
             } catch (error) {
@@ -111,6 +114,7 @@ const Notes = () => {
                     />
                 </div>
             )}
+            <h2>{view === 'trash' ? 'Trashed Notes' : 'Your Notes'}</h2>
             <h2>{view === 'archived' ? 'Archived Notes' : 'Your Notes'}</h2>
             <div className="notes-list">
                 {filteredNotes.map(note => (
