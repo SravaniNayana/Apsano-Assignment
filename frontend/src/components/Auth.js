@@ -41,9 +41,9 @@ const Auth = () => {
                 {!isLogin && (
                     <div>
                         <input
-                            type="text"
-                            name="username"
-                            placeholder="Username"
+                            type="email"
+                            name="email"
+                            placeholder="Email"
                             onChange={handleChange}
                             required
                         />
@@ -51,9 +51,9 @@ const Auth = () => {
                 )}
                 <div>
                     <input
-                        type="email"
-                        name="email"
-                        placeholder="Email"
+                        type="text"
+                        name="username"
+                        placeholder="Username"
                         onChange={handleChange}
                         required
                     />
