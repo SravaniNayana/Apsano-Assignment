@@ -20,7 +20,7 @@ const Auth = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const endpoint = isLogin ? '/auth/login' : '/auth/register';
+            const endpoint = isLogin ? '/login' : '/register';
             const { data } = await api.post(endpoint, formData);
             if (isLogin) {
                 login(data.token);
