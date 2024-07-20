@@ -114,7 +114,7 @@ const Notes = () => {
                     />
                 </div>
             )}
-            <h2>{view === 'trash' ? 'Trashed Notes' : {view === 'archived' ? 'Archived Notes' : 'Your Notes'}}</h2>
+            <h2>{view === 'trash' ? 'Trashed Notes' : view === 'archived' ? 'Archived Notes' : 'Your Notes'}</h2>
             <div className="notes-list">
                 {filteredNotes.map(note => (
                     <div key={note._id} className="note" style={{ backgroundColor: note.color }}>
@@ -124,12 +124,12 @@ const Notes = () => {
                         {note.tags && <p>Tags: {note.tags.join(', ')}</p>}
                         {view === 'archived' ? (
                             <button onClick={() => handleUnarchive(note._id)}>Unarchive</button>
-                        ) : {view !== 'trash' ? (
+                        ) : view !== 'trash' ? (
                             <>
                                 <button onClick={() => handleArchive(note._id)}>Archive</button>
                                 <button onClick={() => handleDelete(note._id)}>Delete</button>
                             </>
-                        )}}
+                        )}
                     </div>
                 ))}
             </div>
