@@ -129,7 +129,7 @@ const Notes = () => {
                                 <button onClick={() => handleArchive(note._id)}>Archive</button>
                                 <button onClick={() => handleDelete(note._id)}>Delete</button>
                             </>
-                        )}
+                        ) : ( <p>Deleted</p> ) }
                     </div>
                 ))}
             </div>
