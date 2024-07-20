@@ -18,6 +18,9 @@ const Menu = ({ onMenuSelect }) => {
                 <li>
                     <button onClick={() => onMenuSelect('archived')}>Archived Notes</button>
                 </li>
+                <li>
+                    <button onClick={() => onMenuSelect('trash')}>Trash Notes</button>
+                </li>
             </ul>
         </nav>
     );
