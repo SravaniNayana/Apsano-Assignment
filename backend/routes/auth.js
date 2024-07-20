@@ -20,14 +20,14 @@ router.post('/register', async (req, res) => {
 
 // Login user
 router.post('/login', async (req, res) => {
-    const { email, password } = req.body;
+    const { username, password } = req.body;
     try {
-        const user = await User.findOne({ email });
+        const user = await User.findOne({ username });
         if (user && (await user.matchPassword(password))) {
             const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1d' });
             res.json({ token });
         } else {
-            res.status(401).json({ error: 'Invalid email or password' });
+            res.status(401).json({ error: 'Invalid username or password' });
         }
     } catch (error) {
         res.status(500).json({ error: 'Server error' });
